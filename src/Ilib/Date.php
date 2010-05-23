@@ -49,6 +49,8 @@ class Ilib_Date
     /**
      * Converts date to db-format
      *
+     * @todo consider using the regex from http://www.sitepoint.com/forums/showpost.php?p=4600175&postcount=2
+     *
      * @param string $default_year Default year if current year will not work
      *
      * @return boolean
