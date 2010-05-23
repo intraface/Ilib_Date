@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL &~E_DEPRECATED);
+//error_reporting(E_ALL &~E_DEPRECATED);
 require_once 'PHPUnit/Framework.php';
 require_once '../src/Ilib/Date.php';
 

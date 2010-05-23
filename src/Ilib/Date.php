@@ -59,15 +59,17 @@ class Ilib_Date
         $d = "([0-3]?[0-9])";
         $m = "([0-1]?[0-9])";
         $y = "([0-9][0-9][0-9][0-9]|[0-9]?[0-9])";
-        $s = "(-|\.|/| )";
+      //$s = "(-|\.|/| )";
+        $s = "(-|\.|\/| )";
 
         if ($default_year == "") {
             $default_year = date("Y");
         }
 
-        if (ereg("^".$d.$s.$m.$s.$y."$", $this->date, $parts)) {
+
+        if (preg_match("/^".$d.$s.$m.$s.$y."$/", $this->date, $parts)) {
             // true
-        } elseif(ereg("^".$d.$s.$m."$", $this->date, $parts)) {
+        } elseif(preg_match("/^".$d.$s.$m."$/", $this->date, $parts)) {
             $parts[5] = $default_year;
             // true
         } else {
