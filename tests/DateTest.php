@@ -1,7 +1,7 @@
 <?php
-//error_reporting(E_ALL &~E_DEPRECATED);
+error_reporting(E_ALL);
 require_once 'PHPUnit/Framework.php';
-require_once '../src/Ilib/Date.php';
+require_once dirname(__FILE__) . '/../src/Ilib/Date.php';
 
 date_default_timezone_set('Europe/Berlin');
 
