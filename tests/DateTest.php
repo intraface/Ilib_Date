@@ -34,4 +34,10 @@ class DateTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($date->convert2db());
         $this->assertEquals('2009-10-10', $date->get());
     }
+   
+    function testInvalidDateCannotConvert()
+    {
+        $date = new Ilib_Date(1);
+        $this->assertFalse($date->convert2db());
+    } 
 }
