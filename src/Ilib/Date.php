@@ -41,7 +41,7 @@ class Ilib_Date
      *
      * @return void
      */
-    function __construct($date)
+    public function __construct($date)
     {
         $this->date = $date;
     }
@@ -55,7 +55,7 @@ class Ilib_Date
      *
      * @return boolean
      */
-    function convert2db($default_year = "")
+    public function convert2db($default_year = "")
     {
         // @todo Remember to edit both the validator an this class
         $d = "([0-3]?[0-9])";
@@ -69,7 +69,7 @@ class Ilib_Date
 
         if (preg_match("/^".$d.$s.$m.$s.$y."$/", $this->date, $parts)) {
             // true
-        } elseif(preg_match("/^".$d.$s.$m."$/", $this->date, $parts)) {
+        } elseif (preg_match("/^".$d.$s.$m."$/", $this->date, $parts)) {
             $parts[3] = $default_year;
             // true
         } else {
@@ -85,7 +85,7 @@ class Ilib_Date
      *
      * @return string
      */
-    function get()
+    public function get()
     {
         return $this->date;
     }
